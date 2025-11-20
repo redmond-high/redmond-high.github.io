@@ -1,48 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBSDQ0MXB0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LBSDQ0MXB0');
-</script>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="google-adsense-account" content="ca-pub-3924388554248092">
-<title>Home - Redmond High School</title>
-  <link rel="stylesheet" href="/src/styles.css">
-  <link rel="icon" type="image/x-icon" href="https://resources.finalsite.net/images/f_auto,q_auto/v1723594383/lwsdorg/gc42bbeffdqvghcuuouy/favicon-Redmond_HS.ico">
-<style> 
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>go stangs</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Configure Tailwind to use Inter and custom school colors -->
+    <style>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'rhs-maroon': '#6a0000', // A deep maroon
+                        'rhs-gold': '#fdb913',   // A bright gold
+                    }
+                }
+            }
+        }
+    </style>
 </head>
-<body>
-<ul>
- <li><a class="active" href="index.html">Home</a> </li>
-  <li><a href="games.html">Games</a></li>
-  <li><a href="apps.html">Apps</a></li>
-  <li><a href="search.html">Search</a></li>
-   <a href="about.html"> <img src=/Logo.jpg></a> 
-   <a href="settings.html"> <img style="width: 25px; height: auto; margin-top: 12.5px; margin-left: 17.5px"src=src/images/settings.png></a> 
-  <li style="float:right"><a  href="about.html">About</a></li>
-</ul> 
+<body class="bg-gray-100 font-sans antialiased">
 
-  <div id="particles-js"></div>
-      <script type="text/javascript" src="src/js/particles.js"></script>
-      <script type="text/javascript" src="src/js/app.js"></script>
+    <div class="flex flex-col min-h-screen">
 
-<div style="text-align:center;   padding: 25vh 0;">
-  <h1 style="color: white; font-size: 40px; margin: 10px; margin-top: 150px font-family: Nunito, sans-serif; font-weight: 200;">Welcome to</h1>
-   <h1 style="color: white; font-size: 70px; margin: 10px; font-family: Nunito, sans-serif; font-weight: 750;">The Gaming Escape</h1>
-  <a href="search.html">
-  <button class="btn btn-gradient-border btn-glow">Continue Unblocked</button>
-    <a>
-</div>
-<div class="dot"></div>
+        <!-- Header Navigation -->
+        <nav class="bg-rhs-maroon shadow-lg">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="text-2xl font-bold text-white">
+                        <span class="text-rhs-gold">Mustang</span> Arcade
+                    </div>
+                    <div>
+                        <a href="#" class="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#" class="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Leaderboards</a>
+                        <a href="#" class="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-6 py-12">
+            <h1 class="text-4xl font-bold text-center text-rhs-maroon mb-12">
+                Choose Your Game
+            </h1>
+
+            <!-- Game Icon Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                
+                <!-- Game Card 1: Arcade -->
+                <a href="#" class="group block bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Icon: Joystick -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-rhs-maroon group-hover:text-rhs-gold transition-colors duration-300 mb-4">
+                            <path d="M11 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/>
+                            <path d="M4 17V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v9"/>
+                            <path d="M6 21v-4"/>
+                            <path d="M13 4v4"/>
+                            <path d="M18 17v4"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-900">Classic Arcade</h3>
+                        <p class="text-gray-600 mt-2">Relive the 80s!</p>
+                    </div>
+                </a>
+
+                <!-- Game Card 2: Puzzle -->
+                <a href="#" class="group block bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Icon: Puzzle Piece -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-rhs-maroon group-hover:text-rhs-gold transition-colors duration-300 mb-4">
+                            <path d="M19 11h-1.5a1.5 1.5 0 0 0 0 3H19v2a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-2H3.5a1.5 1.5 0 0 1 0-3H5V9a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2Z"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-900">Brain Teasers</h3>
+                        <p class="text-gray-600 mt-2">Test your logic.</p>
+                    </div>
+                </a>
+
+                <!-- Game Card 3: Strategy -->
+                <a href="#" class="group block bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Icon: Chess Knight -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-rhs-maroon group-hover:text-rhs-gold transition-colors duration-300 mb-4">
+                            <path d="M15.5 2.2a2 2 0 0 1 2 1.3l1.1 3.9a2 2 0 0 1-1 2.3L15 11l.9 2.5a2 2 0 0 1-1 2.3L10 18H7a1 1 0 0 1-1-1v-6h2l3-3 1.1-3.9a2 2 0 0 1 1.4-1.5z"/>
+                            <path d="M6 18H3a1 1 0 0 1-1-1v-4l4-4h3"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-900">Strategy Games</h3>
+                        <p class="text-gray-600 mt-2">Plan your moves.</p>
+                    </div>
+                </a>
+
+                <!-- Game Card 4: Action -->
+                <a href="#" class="group block bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Icon: Gamepad -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-rhs-maroon group-hover:text-rhs-gold transition-colors duration-300 mb-4">
+                            <line x1="6" x2="10" y1="12" y2="12"/>
+                            <line x1="8" x2="8" y1="10" y2="14"/>
+                            <line x1="15" x2="15.01" y1="13" y2="13"/>
+                            <line x1="18" x2="18.01" y1="11"S" y2="11"/>
+                            <rect width="20" height="12" x="2" y="6" rx="2"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-900">Action Platformers</h3>
+                        <p class="text-gray-600 mt-2">Jump and run!</p>
+                    </div>
+                </a>
+
+            </div>
+        </main>
+        <footer class="bg-rhs-maroon text-gray-300 mt-12">
+            <div class="container mx-auto px-6 py-6 text-center">
+                <p>&copy; 2025 Redmond High School Games. All rights reserved.</p>
+                <p class="text-sm text-gray-400 mt-1">lose your gpa in seconds!</p>
+            </div>
+        </footer>
+
+    </div>
+
 </body>
-</html> 
+</html>
